@@ -8,17 +8,17 @@
 
       <!--Search and filter-->
       <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-        <div class="collapse navbar-collapse" id="basicExampleNav">
+        <div class="collapse navbar-collapse text-white" id="basicExampleNav">
           <form class="form-inline">
 
             <!--Category filtering-->
             <select name="category" class="form-select ml-auto category-filter">
-              <option value="">{% trans "Categories" %}</option>
+              <option value="" class="text-dark">{% trans "Categories" %}</option>
               {% for category in category_choices %}
                 {% if category.0 == category_option %}
-                  <option selected value="{{ category.0 }}">{{ category.1 }}</option>
+                  <option class="text-dark" selected value="{{ category.0 }}">{{ category.1 }}</option>
                 {% else %}
-                  <option value="{{ category.0 }}">{{ category.1 }}</option>
+                  <option class="text-dark" value="{{ category.0 }}">{{ category.1 }}</option>
                 {% endif %}
               {% endfor %}
             </select>
@@ -83,12 +83,12 @@
 
             <!--Sorting-->
             <select name="sort" class="form-select ml-auto category-filter">
-              <option value="">{% trans "Sort" %}</option>
+              <option class="text-dark" value="">{% trans "Sort" %}</option>
               {% for option in sort_choices %}
                 {% if forloop.counter0 == sort %}
-                  <option value="{{forloop.counter0}}" selected>{{option.text}}</option>
+                  <option class="text-dark" value="{{forloop.counter0}}" selected>{{option.text}}</option>
                 {% else %}
-                  <option value="{{forloop.counter0}}">{{option.text}}</option>
+                  <option class="text-dark" value="{{forloop.counter0}}">{{option.text}}</option>
                 {% endif %}
               {% endfor %}
             </select>

@@ -59,7 +59,7 @@
                       </div>
                       {% if can_rate %}
                       <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
-                        <a href="#" class="btn btn-outline-primary btn-sm text-nowrap rounded-pill px-3 shadow-none" role="button">Rate</a>
+                        <a href="{% url 'app:review' order_item.item.slug %}" class="btn btn-outline-primary btn-sm text-nowrap rounded-pill px-3 shadow-none" role="button">Rate</a>
                       </div>
                       {% endif %}
                     </div>
